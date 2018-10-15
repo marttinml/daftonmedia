@@ -49,13 +49,13 @@
             $scope.menuShow = false;
           };
 
-          $('h1').parallaxContent({
-            shift: -15,
-            duration: 1
-          });
-          $('#contentInfo').parallaxContent({
-            shift: -15,duration: 2
-          });
+        //   $('h1').parallaxContent({
+        //     shift: -15,
+        //     duration: 1
+        //   });
+        //   $('#contentInfo').parallaxContent({
+        //     shift: -15,duration: 2
+        //   });
 
             var i = 0;
             var txt = 'Somos el futuro de las agencias de publicidad. Nuestra especialidad es hacer crecer tu empresa mediante el uso del Neuromarketing, Análisis de Datos y un Diseño Increíble';
