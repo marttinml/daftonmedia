@@ -16,7 +16,7 @@
     
         this.startIndex = 1;
         this.slidesNumber = 12;
-        this.baseUrl = document.location.origin + 'assets/img/';
+        this.baseUrl = document.location.origin + '/assets/img/';
         this.slides = [];
         $scope.colores = ['azul-verde','azul-verde-b','azul-rojo','azul-rojo-b','morado-naranja','morado-naranja_b'];
         $scope.color = $scope.colores[Math.floor((Math.random() * ($scope.colores.length - 1)) + 1)];
