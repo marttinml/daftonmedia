@@ -1,68 +1,266 @@
 <!DOCTYPE html>
-<html lang="es"  ng-app="app">
+<html lang="es" ng-app="app">
 <head>
-        <base href="/">
-        
-
-        <meta name="description" content="Ofrecemos servicios de valuación en todo el país, contamos con experiencia en cualquier tipo de inmueble, abarcando todos los propósitos que requieran los clientes: estimación de valor, avalúos comerciales y avalúos para créditos hipotecarios
-        Traslado de dominio, aseguramiento o juicios">
-<meta name="robots" content="index, follow, archive">
-<meta property="st:section" content="Ofrecemos servicios de valuación en todo el país, contamos con experiencia en cualquier tipo de inmueble, abarcando todos los propósitos que requieran los clientes: estimación de valor, avalúos comerciales y avalúos para créditos hipotecarios
-Traslado de dominio, aseguramiento o juicios">
-<meta property="og:url" content="https://avaluosyarquitectos.com">
-<meta property="og:title" content="Avalúos & Arquitectos">
-<meta property="og:description" content="Ofrecemos servicios de valuación en todo el país, contamos con experiencia en cualquier tipo de inmueble, abarcando todos los propósitos que requieran los clientes: estimación de valor, avalúos comerciales y avalúos para créditos hipotecarios
-Traslado de dominio, aseguramiento o juicios">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="es_ES">
-<!-- <meta property="og:image" content="https://avaluosyarquitectos.com/assets/img/A_A_solo.svg"> -->
-<meta property="og:site_name" content="Somos Valuadores Inmobiliarios Certificados y Arquitectos"><title>Ofrecemos servicios de valuación en todo el país, contamos con experiencia en cualquier tipo de inmueble, abarcando todos los propósitos que requieran los clientes: estimación de valor, avalúos comerciales y avalúos para créditos hipotecarios
-        Traslado de dominio, aseguramiento o juicios</title>
-
-
-        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-<link rel="manifest" href="assets/favicons/site.webmanifest">
-<link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
     
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>A&A</title>
-    <link rel="stylesheet" href="./assets/css/normalize.css">    
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-</head>
-<body ng-controller="AppController">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Daftonmedia</title>
+        <link rel="stylesheet" href="./assets/css/normalize.css">    
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/ui-carousel.css">
 
-        <script src="assets/libs/particles.js"></script>
-        
-        <!-- Render view -->
-        <div ng-view></div>
-
-        <!-- References angular.js -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <script src="assets/libs/jquery.min.js"></script>
         <script src="assets/libs/angular.min.js"></script>
-        <script src="assets/libs/angular-locale_es-mx.js"></script>
-        <script src="assets/libs/angular-route.min.js"></script>
-        <script src="assets/libs/angular-touch.min.js"></script>
-        <script src="assets/libs/angular-resource.min.js"></script>
+        <script src="assets/libs/ui-carousel.js"></script>
+        <script src="assets/libs/TweenLite.min.js"></script>
+        <script src="assets/libs/CSSPlugin.min.js"></script>
+        <script src="assets/libs/parallax_content.js"></script>
+        <script src="assets/libs/controller.js"></script>
+</head>
+<body ng-controller="Ctrl as ctrl" ng-class="[color,time]">
+
+                <header>
+                        <nav>
+                                <ul class="a-left">
+                                        <a class="" href="#home"><li><i class="logo-dynamic"></i></li></a>
+                                </ul>
+                                <ul class="a-center menu-web" >
+                                        <a href="#nosotros"><li>Nosotrso</li></a>
+                                        <a href="#servicios"><li>Servicios</li></a>
+                                        <a href="#contacto"><li>Contacto</li></a>
+                                </ul>
+                                <ul class="a-right menu-web">
+                                        <a href="tel:5567087001" class="c-dynamic"><i class="fas fa-phone"></i><li> <b>(55) 6708 7001 </b></li> </a>
+                                </ul>
+                        </nav>
+                        <div class="menu-mobile bg-dynamic" ng-class="{show: menuShow}">
+                                <i class="fas fa-bars c-dynamic bar fa-lg" ng-click="showMenu()"></i>
+                                <i class="fas fa-times c-dynamic ex fa-lg" ng-click="hideMenu()"></i>
+                                <ul class="bg-dynamic">
+                                        <a href="#nosotros"  ng-click="hideMenu()"> <li><b>Nosotros</b></li></a>
+                                        <a href="#servicios"  ng-click="hideMenu()"> <li><b>Servicios</b></li></a>
+                                        <a href="#contacto"  ng-click="hideMenu()"> <li><b>Contacto</b></li></a>
+                                        <li class="phone"><b>
+                                                <a href="tel:5567087001"><span> + 52 (55) 6708 7001 </span></a></b>
+                                        </li>
+                                </ul>
+                        </div>
+        
+                </header>
+                
+                <section class="home wallpaper" id="home">
+                        <i class="logo-home-blanco"></i></i>
+                        <div class="spin">
+                                <i class="logo-dynamic logo-home"></i>
+                                <div id="typing" class=" c-dynamic typing"></div>
+                        </div>
+                </section>
+        
+                <section class="nosotros bg-dynamic c-dynamic-h" id="nosotros">
+                        <div class="max-width">
+                                <h1>Nosotros</h1>
+                                <p class="t-center">
+                                                Puntualidad: Esta es una característica que nuestra empresa tiene con todos sus trabajadores, respetando siempre el tiempo de llegada y salida a los centros de trabajo de nuestros clientes y sobre todo, respetando las horas de presentar nuestros proyectos y la realización de los trabajos contratados, siempre dentro de los horarios que nos fijan nuestros clientes.
+                                                <br>
+                                                <br>
+                                                Calidad: Todos los productos e insumos en general y servicios ofrecidos son de excelencia y extraordinaria calidad, responsabilizándose nuestra empresa en otorgar por escrito todo tipo de garantías .
+                                                Justicia: Nuestra Empresa tiene como característica no contratar a menores de edad para ningún tipo de trabajo, haciendo referencia que todos y cada uno de los colaboradores de nuestra empresa gozan de todas las prestaciones sociales que emanan de la Legislación relativa a la Seguridad Social, así como cumplimos con
+                                                todas las obligaciones que marca la Ley Federal de Trabajo, observando que nuestra empresa NO DISCRIMINA a ningún trabajador por cuestiones religiosas, preferencias políticas, raza, sexo o preferencias sexuales distintas, género, motivos culturales, sociales, o personas con discapacidades diferentes, privilegiando la igualdad de derechos, promoviendo la imparcialidad de las acciones y dando a todos y a todas un trato equitativo e igualitario. Para nuestra Empresa todo trabajador es tratado con dignidad y respeto.
+                                </p>
+        
+                                <div class="item-row">
+                                        <div class="item-col padding-20 ">
+                                                <div class="card width-350 margin-auto">
+                                                        <div class="img" style="background-image: url(assets/img/socio_1.jpg)"></div>
+                                                        <div class="hover-link">
+                                                                <span> 
+                                                                        <span>Jim Clifton se ha desempeñado como CEO de Gallup, empresa líder global en consultoría e investigación de opinión pública con 30 oficinas en 20 países y regiones diferentes. El Sr. Clifton es autor de The coming jobs war y co-autor de Entrepreneurial Strengths Finder. Participa en varios Consejos de administración y es director del fondo Thurgood Marshall College</span>
+                                                                        <br>
+                                                                        <i class="fab fa-3x fa-linkedin"></i>
+                                                                </span>
+                                                        </div>
+                                                </div>
+                                                <div class="info t-center">
+                                                        <h3 class="margin-bottom-0">Jim Clifton</h3>
+                                                        <span>Socio Fundador</span>
+                                                </div>
+                                        </div>
+                                        <div class="item-col padding-20">
+                                                <div class="card width-350 margin-auto">
+                                                        <div class="img" style="background-image: url(assets/img/socio_2.jpg)"></div>
+                                                        <div class="hover-link">
+                                                                <span>
+                                                                        <span>Ganador del concurso Jóvenes Emprendiendo en la CDMX 2.0 fue nombrado Embajador del Emprendimiento en la CDMX y actualmente es integrante de la comisión de Jóvenes Empresarios de la COPARMEX. Con experiencia en el mundo de la publicidad y los negocios en su primer empresa Warriors&Fit, fue proveedor del IPN a nivel nacional de artículos promocionales.</span>
+                                                                        <br>
+                                                                        <i class="fab fa-3x fa-linkedin"></i>
+                                                                </span>
+                                                        </div>
+                                                </div>
+                                                <div class="info t-center">
+                                                        <h3 class="margin-bottom-0">Leonardo Juárez</h3>
+                                                        <span>Socio Fundador/CEO</span>
+                                                </div>    
+                                        </div>
+                                        <div class="item-col padding-20">
+                                                <div class="card  width-350 margin-auto">
+                                                        <div class="img" style="background-image: url(assets/img/socio_3.jpg)"></div>
+                                                        <div class="hover-link">
+                                                                <span>
+                                                                        <span>Con más de 20 años de experiencia ejecutiva en ventas y desarrollo estratégico de negocios, es el diseñador en jefe de programas emprendedores en México para más de 25,000 participantes. También es el diseñador en jefe de programas de aceleración para MiPymes (+2,500  MiPyMes). Es miembro honorario del Club de E. Industriales. Consejero estratégico para varios negocios y cámaras de comercio e industriales en México.</span>
+                                                                        <br>
+                                                                        <i class="fab fa-3x fa-linkedin"></i>
+                                                                </span>
+                                                        </div>
+                                                </div>
+                                                <div class="info t-center">
+                                                        <h3 class="margin-bottom-0"> Gerardo Aranda</h3>
+                                                        <span>Consejero</span>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+        
+                
+        
+                <section class="servicios " id="servicios">
+                        <h1 class="c-inherit">Servicios</h1>
+                        
+                        <div class="max-width c-dynamic-h">
+        
+                                <div class="item-row">
+                                        <div class="item-col padding-20">
+                                                <div class="card">
+
+                                                        <div class="img" style="background-image: url(assets/img/consultoria.jpg)"></div>
+                                                        <div class="hover-link fs-18"><span>
+                                                                Ponemos nuestra experiencia, nuestros conocimientos y nuestro talento a tu disposición para darte consultoría en temas en los que somos expertos como el Marketing Digital, Marketing de Contenidos, NeuroMarketing, etc. Al final del día, el objetivo es que tu empresa crezca generando más ventas, fidelizar a tus clientes actuales y llegar a otros mercados. ¿Figura pública? Te ayudamos y te asesoramos para que lleves tus redes sociales a la perfección.
+                                                                <br>
+                                                                <br>
+                                                                <b>Tiempo y Dinero</b>
+                                                                <br>
+                                                                Tratar de construir una marca lleva mucho tiempo, esfuerzo y dinero, sobre todo si no se hace correctamente. Si, millones de personas usamos las redes sociales, pero no todas saben cómo usarlas correctamente para hacer crecer su negocio y su marca ¿o si?
+                                                        </span></div>                                                
+                                                        <div class="info">
+                                                                <h3>Consultoría</h3>
+                                                        </div>
+                                                        
+                                                </div>
+                                        </div>
+                                </div>
+                        <div class="item-row">
+                                <div class="item-col padding-20">
+                                        <div class="card">
+                                                <div class="img" style="background-image: url(assets/img/boost.jpg)"></div>
+                                                <div class="hover-link fs-16"><span>Lo que hacemos es llevar el negocio de nuestros clientes al mercado digital. Hemos trabajado con empresas y negocios que no tenían ni página web ni redes sociales, creando toda su experiencia digital desde cero. También hemos trabajado con clientes que abrieron un perfil en Facebook, o que abrieron una página web, pero que no le dieron seguimiento. Analizando desde cero su situación y desarrollando estrategias para llegar a sus objetivos. </span></div>
+                                                <div class="info">
+                                                        <h3>Boost Digital</h3>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="item-col padding-20">
+                                        <div class="card">
+                                                <div class="img" style="background-image: url(assets/img/social.jpg)"></div>
+                                                <div class="hover-link fs-16">
+                                                        <span class="">
+                                                                Nosotros nos encargamos de toda la experiencia de tu empresa en redes sociales, creamos el contenido, lo publicamos, lo promocionamos y después medimos los resultados. 
+                                                                <br>
+                                                                <br>
+                                                                <b>¿No sabes en qué redes sociales deberías de estar? </b>
+                                                                <br>                                                                        
+                                                                No te preocupes, nosotros también nos encargamos de eso, analizamos tu marca, tu empresa, tus servicios y tus clientes para darte la mejor asesoría en redes sociales.</span></div>
+                                                <div class="info">
+                                                        <h3>Redes Sociales </h3>
+                                                </div>
+                                        </div>
+                                        
+                                </div>
+                        </div>
+                        <div class="item-row">
+                                <div class="item-col padding-20">
+                                        <div class="card">
+                                                <div class="img" style="background-image: url(assets/img/pagina.jpg)"></div>
+                                                <div class="hover-link fs-16"><span>La atención del ser humano hoy en día dura 2.8 segundos, si no captas la atención de tus clientes en ese tiempo, simplemente cerrarán la pestaña y se irán a otra página de las 1.3 billones de páginas que están en la web.</span></div>                                                
+                                                <div class="info">
+                                                        <h3>Página Web</h3></p>
+                                                </div>
+                                        </div>
+                                        
+                                </div>
+                                <div class="item-col padding-20">
+                                        <div class="card">
+                                                <div class="img" style="background-image: url(assets/img/foto.jpg)"></div>
+                                                <div class="hover-link fs-16"><span>Nos encargamos de la producción de tu empresa o evento. Con un equipo de fotógrafos, editores y pilotos de drones tenemos lo que necesitas para que tu empresa luzca espectacular. </span></div>                                                
+                                                <div class="info">
+                                                        <h3>Fotografía y Video</h3>
+                                                </div>
+                                        </div>
+                                        
+                                </div>
+                        </div>
+                </div>
+                                
+                </section>
+        
+                <section class="clientes padding-20 b-dynamic-h c-inherit" id="clientes">
+                                <h1>Clientes</h1>
+                                <div class="max-width width-90p">
+                                        <ui-carousel  disable-animation="true" slides="ctrl.slides"  slides-to-show="3" slides-to-scroll="3" initial-slide="ctrl.startIndex"  dots="true">
+                                                <carousel-item>
+                                                        <div class="img-slide" ng-style="{'background-image': item.image}"></div>
+                                                </carousel-item>
+                                        </ui-carousel>
+                                </div>
+                        </section>
+                </section>
+        
+                <section class="contacto mapa c-inherit" id="contacto">
+                        <h1 >Contacto</h1>
+        
+                        <div class="max-width-350  padding-20 contenido-contacto b-radius-4">
+                                <h2 class="c-dynamic"><b>+52 (55) 6708 7001</b></h2>
+                                <h3>info@daftonmedia.com</h3>
+                                <br>
+                                <h4>¿Dudas?</h4>
+                
+                
+                                <div class="item-row t-center  c-dynamic">
+                                        <div class="item-col"> <a href="tel:5567087001"><div class="circle-r50"><i class="fas fa-3x fa-phone-square"></i></div></a></div>
+                                        <div class="item-col"> <a href="https://api.whatsapp.com/send?phone=5567087001&amp;text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20alguno%20de%20sus%20servicios." target="_blank"><div class="circle-r50"><i class="fab fa-3x fa-whatsapp-square"></i></div></a></div>
+                                        <div class="item-col"><a  href="mailto:info@daftonmedia.com?Subject=%C2%A1Hola!"><div class="circle-r50"><i class="fas fa-3x fa-envelope-square"></i></div></a></div>
+                                </div>
+                        </div>
+        
+                </section>
+        
+                <footer>
+                        <div class="item-row max-width-250 c-white t-center">
+                                <div class="item-col"><a href="http://www.facebook.com/DAFTONME"></a><i class="fab fa-2x fa-facebook cursor-pointer"></i></a></div>
+                                <div class="item-col"> <a href="https://www.youtube.com/channel/UClk-kCTMckOWJDuvOBNXLnw"></a><i class="fab fa-2x fa-youtube cursor-pointer"></i></a></div>
+                                <div class="item-col"> <a href="https://www.instagram.com/daftonme"><i class="fab fa-2x fa-instagram cursor-pointer"></i></a> </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="item-row c-dynamic t-center">
+                                <div class="item-col">
+                                        <i class="logo-positivo"><i class="logo-footer-blanco"></i></i>
+                                </div>
+                        </div>
+                        <br>
+                        <br>
+        
+                        <hr>
+                        <div class="item-row c-white fs-10">
+                                <div class="item-col">© 2018 por DM Agencia Creativa S.A. de C.V.</div>
+                                <div class="item-col"></div>
+                                <div class="item-col t-right">Diseño y Desarrollo por ALOUX</div>
+                        </div>
+        
+                </footer>
 
 
-        <!-- app config -->
-        <script src="app/config/app.module.js"></script>
-        <script src="app/config/app.router.js"></script>
-        <script src="app/config/app.controller.js"></script>
-        <script src="app/config/app.singleton.js"></script>
-        <script src="app/config/app.resourceProvider.js"></script>
-
-        <!-- Modules  -->
-        <script src="app/modules/home/controllers/home.controller.js"></script>
-
-        <!-- Shared	 -->
-        <!-- Components -->
-        <script src="app/shared/components/ng-spin/ng-spin.directive.js"></script>
+</body>
 </body>
 </html>
