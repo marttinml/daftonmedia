@@ -24,7 +24,7 @@
         $scope.time = $scope.d.getHours() > 19 || $scope.d.getHours() < 7 ? 'night' : 'day'; 
 
         for(var i = 1; i < this.slidesNumber; i++){
-            this.slides.push( { image: 'url('+this.baseUrl+ 'cliente_'+i+'.jpg)'});
+            this.slides.push( { image: 'url('+this.baseUrl+ 'cliente_'+i+'.png)'});
         };
       
         $scope.categorias = [
