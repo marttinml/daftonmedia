@@ -8,12 +8,15 @@
         <title>Daftonmedia</title>
         <link rel="stylesheet" href="./assets/css/normalize.css">    
         <link rel="stylesheet" href="./assets/css/style.css">
-        <link rel="stylesheet" href="./assets/css/ui-carousel.css">
+        <!-- <link rel="stylesheet" href="./assets/css/ui-carousel.css"> -->
+        <link rel="stylesheet" href="./assets/css/slick.css">
+        <link rel="stylesheet" href="./assets/css/slick-theme.css">
 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
         <script src="assets/libs/jquery.min.js"></script>
+        <script src="assets/libs/slick.min.js"></script>
         <script src="assets/libs/angular.min.js"></script>
-        <script src="assets/libs/ui-carousel.js"></script>
+        <!-- <script src="assets/libs/ui-carousel.js"></script> -->
         <script src="assets/libs/TweenLite.min.js"></script>
         <script src="assets/libs/CSSPlugin.min.js"></script>
         <script src="assets/libs/parallax_content.js"></script>
@@ -32,7 +35,7 @@
                                         <a href="#contacto"><li>Contacto</li></a>
                                 </ul>
                                 <ul class="a-right menu-web">
-                                        <a href="tel:5567087001" class="c-dynamic"><i class="fas fa-phone"></i><li> <b>(55) 6708 7001 </b></li> </a>
+                                        <a href="tel:5567087001" class="c-dynamic"><i class="fas fa-phone"></i><li> <b>+ 52 (222) 670 6139 </b></li> </a>
                                 </ul>
                         </nav>
                         <div class="menu-mobile bg-dynamic" ng-class="{show: menuShow}">
@@ -43,14 +46,14 @@
                                         <a href="#servicios"  ng-click="hideMenu()"> <li><b>Servicios</b></li></a>
                                         <a href="#contacto"  ng-click="hideMenu()"> <li><b>Contacto</b></li></a>
                                         <li class="phone"><b>
-                                                <a href="tel:5567087001"><span> + 52 (55) 6708 7001 </span></a></b>
+                                                <a href="tel:5567087001"><span> + 52 (222) 670 6139 </span></a></b>
                                         </li>
                                 </ul>
                         </div>
         
                 </header>
                 
-                <section class="home wallpaper" id="home">
+                <section class="home bg-dynamic" id="home">
                         <i class="logo-home-blanco"></i></i>
                         <div class="spin">
                                 <i class="logo-dynamic logo-home"></i>
@@ -58,21 +61,17 @@
                         </div>
                 </section>
         
-                <section class="nosotros bg-dynamic c-dynamic-h" id="nosotros">
+                <section class="nosotros c-inherit padding-bottom-100" id="nosotros">
                         <div class="max-width">
                                 <h1>Nosotros</h1>
                                 <p class="t-center">
-                                                Puntualidad: Esta es una característica que nuestra empresa tiene con todos sus trabajadores, respetando siempre el tiempo de llegada y salida a los centros de trabajo de nuestros clientes y sobre todo, respetando las horas de presentar nuestros proyectos y la realización de los trabajos contratados, siempre dentro de los horarios que nos fijan nuestros clientes.
-                                                <br>
-                                                <br>
-                                                Calidad: Todos los productos e insumos en general y servicios ofrecidos son de excelencia y extraordinaria calidad, responsabilizándose nuestra empresa en otorgar por escrito todo tipo de garantías .
-                                                Justicia: Nuestra Empresa tiene como característica no contratar a menores de edad para ningún tipo de trabajo, haciendo referencia que todos y cada uno de los colaboradores de nuestra empresa gozan de todas las prestaciones sociales que emanan de la Legislación relativa a la Seguridad Social, así como cumplimos con
-                                                todas las obligaciones que marca la Ley Federal de Trabajo, observando que nuestra empresa NO DISCRIMINA a ningún trabajador por cuestiones religiosas, preferencias políticas, raza, sexo o preferencias sexuales distintas, género, motivos culturales, sociales, o personas con discapacidades diferentes, privilegiando la igualdad de derechos, promoviendo la imparcialidad de las acciones y dando a todos y a todas un trato equitativo e igualitario. Para nuestra Empresa todo trabajador es tratado con dignidad y respeto.
+                                        SOMOS UNA AGENCIA DE MARKETING DIGITAL, NACIDA EN MÉXICO CON UN IMPACTO INTERNACIONAL.NUESTRA MISIÓN ES CREAR IDEAS Y SOLUCIONES PARA EL CRECIMIENTO DE NUESTROS CLIENTES, ENTENDEMOS QUE NO ESTAMOS EN EL NEGOCIO DE LA PUBLICIDAD, ESTAMOS EN EL NEGOCIO DE HACER CRECER A NUESTROS CLIENTES. ES POR ESO QUE NOS PREOCUPAMOS POR CREAR ESTRATEGIAS QUE TENGAN UN IMPACTO REAL Y POSITIVO EN TU EMPRESA
                                 </p>
-        
+                                <br>
+                                <br>
                                 <div class="item-row">
-                                        <div class="item-col padding-20 ">
-                                                <div class="card width-350 margin-auto">
+                                        <div class="item-col padding-20 width-33p">
+                                                <div class="card  margin-auto">
                                                         <div class="img" style="background-image: url(assets/img/socio_1.jpg)"></div>
                                                         <div class="hover-link">
                                                                 <span> 
@@ -87,8 +86,8 @@
                                                         <span>Socio Fundador</span>
                                                 </div>
                                         </div>
-                                        <div class="item-col padding-20">
-                                                <div class="card width-350 margin-auto">
+                                        <div class="item-col padding-20  width-33p">
+                                                <div class="card margin-auto">
                                                         <div class="img" style="background-image: url(assets/img/socio_2.jpg)"></div>
                                                         <div class="hover-link">
                                                                 <span>
@@ -104,7 +103,7 @@
                                                 </div>    
                                         </div>
                                         <div class="item-col padding-20">
-                                                <div class="card  width-350 margin-auto">
+                                                <div class="card  margin-auto">
                                                         <div class="img" style="background-image: url(assets/img/socio_3.jpg)"></div>
                                                         <div class="hover-link">
                                                                 <span>
@@ -123,7 +122,20 @@
                         </div>
                 </section>
         
-                
+                <section class="clientes padding-20 b-black c-inherit c-white" id="clientes">
+                        <h1>Clientes</h1>
+                        <div class="max-width item-row">
+                                <div class="item-col">
+                                        <i class="img-slide-200" style="background-image: url(assets/img/cliente_1.svg);"></i>
+                                </div>
+                                <div class="item-col">
+                                        <i class="img-slide-200" style="background-image: url(assets/img/cliente_2.svg);"></i>
+                                </div>
+                                <div class="item-col">
+                                        <i class="img-slide-200" style="background-image: url(assets/img/cliente_3.svg);"></i>
+                                </div>
+                        </div>
+                </section>
         
                 <section class="servicios " id="servicios">
                         <h1 class="c-inherit">Servicios</h1>
@@ -204,17 +216,7 @@
                                 
                 </section>
         
-                <section class="clientes padding-20 b-dynamic-h c-inherit" id="clientes">
-                                <h1>Clientes</h1>
-                                <div class="max-width width-90p">
-                                        <ui-carousel  disable-animation="true" slides="ctrl.slides"  slides-to-show="3" slides-to-scroll="3" initial-slide="ctrl.startIndex"  dots="true">
-                                                <carousel-item>
-                                                        <div class="img-slide" ng-style="{'background-image': item.image}"></div>
-                                                </carousel-item>
-                                        </ui-carousel>
-                                </div>
-                        </section>
-                </section>
+
         
                 <section class="contacto mapa c-inherit" id="contacto">
                         <h1 >Contacto</h1>
@@ -236,11 +238,14 @@
                 </section>
         
                 <footer>
+                        <br>
+                        <br>
                         <div class="item-row max-width-250 c-white t-center">
-                                <div class="item-col"><a href="http://www.facebook.com/DAFTONME"></a><i class="fab fa-2x fa-facebook cursor-pointer"></i></a></div>
-                                <div class="item-col"> <a href="https://www.youtube.com/channel/UClk-kCTMckOWJDuvOBNXLnw"></a><i class="fab fa-2x fa-youtube cursor-pointer"></i></a></div>
-                                <div class="item-col"> <a href="https://www.instagram.com/daftonme"><i class="fab fa-2x fa-instagram cursor-pointer"></i></a> </div>
+                                <div class="item-col"><a href="http://www.facebook.com/DAFTONME"><i class="fab fa-2x fa-facebook cursor-pointer c-white"></i></a></div>
+                                <div class="item-col"> <a href="https://www.youtube.com/channel/UClk-kCTMckOWJDuvOBNXLnw"><i class="fab fa-2x fa-youtube cursor-pointer c-white"></i></a></div>
+                                <div class="item-col"> <a href="https://www.instagram.com/daftonme"><i class="fab fa-2x fa-instagram cursor-pointer c-white"></i></a> </div>
                         </div>
+                        <br>
                         <br>
                         <br>
                         <div class="item-row c-dynamic t-center">
@@ -255,7 +260,7 @@
                         <div class="item-row c-white fs-10">
                                 <div class="item-col">© 2018 por DM Agencia Creativa S.A. de C.V.</div>
                                 <div class="item-col"></div>
-                                <div class="item-col t-right">Diseño y Desarrollo por ALOUX</div>
+                                <div class="item-col t-right">Diseño y Desarrollo en colaboración con Aloux.</div>
                         </div>
         
                 </footer>

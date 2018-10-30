@@ -1,5 +1,5 @@
 (function(){
-    angular.module('app', ['ui.carousel']).controller('Ctrl', function($scope) {
+    angular.module('app', []).controller('Ctrl', function($scope) {
 
 
         $(document).ready(function(){
@@ -11,6 +11,15 @@
                 });
               }
             });
+
+            $('.variable-width').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                centerMode: true,
+                variableWidth: true
+              });
           });
           
     
@@ -23,9 +32,11 @@
         $scope.d = new Date();
         $scope.time = $scope.d.getHours() > 19 || $scope.d.getHours() < 7 ? 'night' : 'day'; 
 
-        for(var i = 1; i < this.slidesNumber; i++){
-            this.slides.push( { image: 'url('+this.baseUrl+ 'cliente_'+i+'.png)'});
-        };
+        // for(var i = 1; i < this.slidesNumber; i++){
+        //     this.slides.push( { image: 'url('+this.baseUrl+ 'cliente_'+i+'.png)'});
+        // };
+
+        
       
         $scope.categorias = [
             {key: 'todo',         name: 'Todo', active: true},
@@ -58,7 +69,7 @@
         //   });
 
             var i = 0;
-            var txt = 'Somos el futuro de las agencias de publicidad. Nuestra especialidad es hacer crecer tu empresa mediante el uso del Neuromarketing, Análisis de Datos y un Diseño Increíble';
+            var txt = 'Empezamos con la idea de cambiar al mundo, un cliente a la vez, a través de nuestro diseño, marketing y desarrollo de estrategias.';
             var speed = 30;
 
             function typeWriter() {

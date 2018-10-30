@@ -1,22 +1,31 @@
 
-@font-face {
+/* @font-face {
     font-family: manrope_bold;
     src: url(../fonts/manrope_bold.otf);
 }
 @font-face {
-    font-family: manrope_regular;
-    src: url(../fonts/manrope_regular.otf);
+    font-family: manrope_light;
+    src: url(../fonts/manrope_light.otf);
 }
 @font-face {
     font-family: manrope_light;
     src: url(../fonts/manrope_light.otf);
+} */
+
+@font-face {
+    font-family: manrope_bold;
+    src: url(../fonts/Gotham-Bold.otf);
+}
+@font-face {
+    font-family: manrope_light;
+    src: url(../fonts/Gotham-Light.otf);
 }
 
 *{
 	box-sizing: border-box;
 }
 body{
-    font-family: 'manrope_regular', Arial;
+    font-family: 'manrope_light', Arial;
     font-size: 16px;
     color: rgb(13,13,13);
     letter-spacing: .5px;
@@ -41,13 +50,13 @@ h3{
     text-align: center;
     font-size: 22px;
     font-weight: normal;
-    font-family: 'manrope_regular', Arial;
+    font-family: 'manrope_light', Arial;
 }
 h4{
     text-align: center;
     font-size: 18px;
     font-weight: normal;
-    font-family: 'manrope_regular', Arial;
+    font-family: 'manrope_light', Arial;
 }
 
 
@@ -238,17 +247,20 @@ body.night{
     background-position: center;
 }
 .logo-home-blanco{
-    width: 150px;
-    height: 50px;
+    width: 250px;
+    height: 150px;
     display: block;
     background-repeat: no-repeat;
-    background-image: url(../img/logo_blanco.svg);
+    background-image: url(../img/logo_blanco_full.svg);
     margin: auto;
     background-position: center;
     position: absolute;
     left: 50%;
-    top: 50%;
-    margin-left: -75px;
+    top: 45%;
+    margin-left: -125px;
+}
+.b-black{
+    background-color: black;
 }
 
 .carousel-prev{
@@ -263,7 +275,23 @@ body.night{
     background-position: center;
     background-repeat: no-repeat;
 }
+.img-slide-200{
+    width: 200px;
+    height: 200px;
+    background-size: 80% auto ;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    margin: auto;
+}
 
+.border-right{
+    border-right: 1px solid rgb(255,255,255,.5);
+}
+
+.padding-bottom-100{
+    padding-bottom: 100px!important;
+}
 
 .carousel-dots {
     /* bottom: 0px!important; */
@@ -334,7 +362,7 @@ body.night{
     display: table;
     text-align: center;
     width: 100%;
-    font-family: 'manrope_regular', Arial;
+    font-family: 'manrope_light', Arial;
     transition: .3s;
     padding: 20px;
     font-size: 12px;
@@ -406,7 +434,7 @@ body.night{
 }
 
 footer{
-    height: 300px;
+    height: 370px;
     background-color: black;
     padding: 50px;
 }
@@ -506,9 +534,9 @@ hr{
     right: 0;
     bottom: 0;
     -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 10s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 8s; /* Safari 4.0 - 8.0 */
     animation-name: example;
-    animation-duration: 10s;
+    animation-duration: 8s;
     opacity: 0;
 }
 
@@ -554,14 +582,14 @@ hr{
 .azul-verde nav ul a:hover{color: rgb(47,177,167)}
 .azul-verde .c-dynamic{color: rgb(47,177,167);}
 .azul-verde .b-dynamic{background-color: rgb(47,177,167);}
-.azul-verde .bg-dynamic{background-color: rgb(47,177,167);background-image: linear-gradient(to right, rgb(47,177,167), rgb(120,164,44));}
+.azul-verde .bg-dynamic{background-color: rgb(47,177,167);background-image: linear-gradient(to bottom right, rgb(47,177,167), rgb(120,164,44));}
 .azul-verde .logo-dynamic{background-image: url(../img/logo_azul_verde.svg);}
 
 /* azul-verde-b */
 .azul-verde-b nav ul a:hover{color: rgb(47,177,167)}
 .azul-verde-b .c-dynamic{color: rgb(47,177,167);}
 .azul-verde-b .b-dynamic{background-color: rgb(47,177,167);}
-.azul-verde-b .bg-dynamic{background-color: rgb(47,177,167);background-image: linear-gradient(to right, rgb(47,177,167), rgb(120,164,44));}
+.azul-verde-b .bg-dynamic{background-color: rgb(47,177,167);background-image: linear-gradient(to bottom right, rgb(47,177,167), rgb(120,164,44));}
 .azul-verde-b .logo-dynamic{background-image: url(../img/logo_azul_verde_b.svg);}
 
 
@@ -569,28 +597,28 @@ hr{
 .azul-rojo nav ul a:hover{color: rgb(255,51,102)}
 .azul-rojo .c-dynamic{color: rgb(255,51,102);}
 .azul-rojo .b-dynamic{background-color: rgb(255,51,102);}
-.azul-rojo .bg-dynamic{background-color: rgb(255,51,102);background-image: linear-gradient(to right, rgb(51,51,153), rgb(255,51,102));}
+.azul-rojo .bg-dynamic{background-color: rgb(255,51,102);background-image: linear-gradient(to bottom right, rgb(51,51,153), rgb(255,51,102));}
 .azul-rojo .logo-dynamic{background-image: url(../img/logo_azul_rojo.svg);}
 
 /* azul-rojo-b */
 .azul-rojo-b nav ul a:hover{color: rgb(255,51,102)}
 .azul-rojo-b .c-dynamic{color: rgb(255,51,102);}
 .azul-rojo-b .b-dynamic{background-color: rgb(255,51,102);}
-.azul-rojo-b .bg-dynamic{background-color: rgb(255,51,102);background-image: linear-gradient(to right, rgb(51,51,153), rgb(255,51,102));}
+.azul-rojo-b .bg-dynamic{background-color: rgb(255,51,102);background-image: linear-gradient(to bottom right, rgb(51,51,153), rgb(255,51,102));}
 .azul-rojo-b .logo-dynamic{background-image: url(../img/logo_azul_rojo.svg);}
 
 /* morado-naranja */
 .morado-naranja nav ul a:hover{color: rgb(255,153,51)}
 .morado-naranja .c-dynamic{color: rgb(255,153,51);}
 .morado-naranja .b-dynamic{background-color: rgb(255,153,51);}
-.morado-naranja .bg-dynamic{background-color: rgb(255,153,51);background-image: linear-gradient(to right, rgb(153,51,153), rgb(255,153,51));}
+.morado-naranja .bg-dynamic{background-color: rgb(255,153,51);background-image: linear-gradient(to bottom right, rgb(153,51,153), rgb(255,153,51));}
 .morado-naranja .logo-dynamic{background-image: url(../img/logo_morado_naranja.svg);}
 
 /* morado-naranja_b */
 .morado-naranja_b nav ul a:hover{color: rgb(255,153,51)}
 .morado-naranja_b .c-dynamic{color: rgb(255,153,51);}
 .morado-naranja_b .b-dynamic{background-color: rgb(255,153,51);}
-.morado-naranja_b .bg-dynamic{background-color: rgb(255,153,51);background-image: linear-gradient(to right, rgb(153,51,153), rgb(255,153,51));}
+.morado-naranja_b .bg-dynamic{background-color: rgb(255,153,51);background-image: linear-gradient(to bottom right, rgb(153,51,153), rgb(255,153,51));}
 .morado-naranja_b .logo-dynamic{background-image: url(../img/logo_morado_naranja_b.svg);}
 
 /*Day*/
@@ -606,7 +634,7 @@ hr{
 /*Night*/
 .night a{color: rgb(200,200,200);}
 .night header{background-color: rgba(30,30,30,.99);}
-.night .c-inherit{color: white;}
+.night .c-inherit{color: rgba(255,255,255,.9);}
 .night .contenido-contacto{background-color: rgba(0,0,0,.5);}
 .night .b-dynamic-h{background-color: rgb(50, 50, 50);}
 .night .card{background-color: rgb(30,30,30);color: rgb(200,200,200);}
@@ -615,7 +643,9 @@ hr{
 .night .menu-mobile ul li { color: rgb(30, 30, 30);}
 .night .menu-mobile ul li a { color: rgb(30, 30, 30);}
 
-
+.width-33p{
+    width: 33%;
+}
 
 @media screen and (max-width: 1000px) {
     .menu-mobile{
@@ -632,6 +662,9 @@ hr{
     }
     footer .item-col {
         display: table-cell;
+    }
+    .width-33p{
+        width: 100%;
     }
 }
 @media screen and (max-width: 500px) {
