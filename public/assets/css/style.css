@@ -534,9 +534,9 @@ hr{
     right: 0;
     bottom: 0;
     -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 8s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
     animation-name: example;
-    animation-duration: 8s;
+    animation-duration: 5s;
     opacity: 0;
 }
 

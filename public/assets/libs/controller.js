@@ -69,8 +69,9 @@
         //   });
 
             var i = 0;
-            var txt = 'Empezamos con la idea de cambiar al mundo, un cliente a la vez, a través de nuestro diseño, marketing y desarrollo de estrategias.';
+            var txt = 'Cambiamos al mundo un cliente a la vez, a través de nuestro diseño, marketing y estrategias.';
             var speed = 30;
+
 
             function typeWriter() {
                 if (i < txt.length) {
