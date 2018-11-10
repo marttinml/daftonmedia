@@ -82,6 +82,93 @@
             }
             typeWriter();
 
+
+
+            jssor_1_slider_init = function() {
+
+                var jssor_1_options = {
+                  $AutoPlay: 0,
+                  $SlideDuration: 800,
+                  $SlideEasing: $Jease$.$OutQuint,
+                  $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$
+                  },
+                  $BulletNavigatorOptions: {
+                    $Class: $JssorBulletNavigator$
+                  }
+                };
+    
+                var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+    
+                /*#region responsive code begin*/
+    
+                var MAX_WIDTH = 1500;
+    
+                function ScaleSlider() {
+                    var containerElement = jssor_1_slider.$Elmt.parentNode;
+                    var containerWidth = containerElement.clientWidth;
+    
+                    if (containerWidth) {
+    
+                        var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+    
+                        jssor_1_slider.$ScaleWidth(expectedWidth);
+                    }
+                    else {
+                        window.setTimeout(ScaleSlider, 5);
+                    }
+                }
+    
+                ScaleSlider();
+    
+                $Jssor$.$AddEvent(window, "load", ScaleSlider);
+                $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+                $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+                /*#endregion responsive code end*/
+            };
+
+            setTimeout(function(){
+                jssor_1_slider_init();
+            },1000);
+
+
+
+            $scope.services = [
+                {
+                    categorias: ['todo','rostro'],
+                    title: 'Manual de Marca',
+                    desc: 'Manual de MarcaManual de MarcaManual de MarcaManual de MarcaManual de MarcaManual de MarcaManual de MarcaManual de MarcaManual de MarcaManual de MarcaManual de MarcaManual de MarcaManual de Marca',
+                    imgs: ['Servicios-1b.png'],
+                    backgroundColor: '#339999'
+                },
+                {
+                    categorias: ['todo','rostro'],
+                    title: 'Sitio Web',
+                    desc: 'Sitio WebSitio WebSitio WebSitio WebSitio WebSitio WebSitio WebSitio WebSitio WebSitio WebSitio WebSitio WebSitio WebSitio WebSitio WebSitio Web',
+                    imgs: ['Servicios-2b.png'],
+                    backgroundColor: '#663399'
+                },
+                {
+                    categorias: ['todo','cuerpo'],
+                    title: 'Redes Sociales',
+                    desc: 'Redes SocialesRedes SocialesRedes SocialesRedes SocialesRedes SocialesRedes SocialesRedes SocialesRedes SocialesRedes SocialesRedes SocialesRedes SocialesRedes Sociales',
+                    imgs: ['Servicios-3b.png'],
+                    backgroundColor: '#993399'
+                }
+            ];
+
+            $scope.servicio = {};
+            $scope.fullActive = false;
+            $scope.full = function(obj){
+                console.log("XD");
+                $scope.servicio = obj;
+                $scope.fullActive = true;
+            };
+            $scope.min = function(){
+                $scope.fullActive = false;
+            };
+
+
       }).directive('disableAnimation', function($animate){
         return {
             restrict: 'A',
@@ -91,5 +178,5 @@
                 });
             }
         }
-    });;
+    });
 })();

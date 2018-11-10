@@ -20,6 +20,7 @@
         <script src="assets/libs/TweenLite.min.js"></script>
         <script src="assets/libs/CSSPlugin.min.js"></script>
         <script src="assets/libs/parallax_content.js"></script>
+        <script src="assets/libs/jssor.slider.min.js"></script>
         <script src="assets/libs/controller.js"></script>
 </head>
 <body ng-controller="Ctrl as ctrl" ng-class="[color,time]">
@@ -139,8 +140,44 @@
         
                 <section class="servicios padding-bottom-100" id="servicios">
                         <h1 class="c-inherit">Servicios</h1>
+
+
+
+                        <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1300px;height:500px;overflow:hidden;visibility:hidden;">
+                                <!-- Loading Screen -->
+                                <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+                                    <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;"/>
+                                </div>
+                                <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:500px;overflow:hidden;">
+                                    <div>
+                                        <div style="background-color:#339999; margin-top: 50px; margin-bottom: 50px; height: 400px;">
+                                                <img class="img-slide-item" src="assets/img/Servicios-1b.png" ng-click="full(services[0])"/>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div style="background-color:#663399; margin-top: 50px; margin-bottom: 50px; height: 400px;">
+                                                <img class="img-slide-item" src="assets/img/Servicios-2b.png"  ng-click="full(services[1])"//>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div style="background-color:#993399; margin-top: 50px; margin-bottom: 50px; height: 400px;">
+                                        <img class="img-slide-item" src="assets/img/Servicios-3b.png"  ng-click="full(services[2])"//>
+                                        </div>
+                                </div>
+                                </div>
+                                <div data-u="arrowleft" class="jssora051" style="width:65px;height:65px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+                                    <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                                        <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+                                    </svg>
+                                </div>
+                                <div data-u="arrowright" class="jssora051" style="width:65px;height:65px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+                                    <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                                        <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+                                    </svg>
+                                </div>
+                            </div>
                         
-                        <div class="max-width c-dynamic-h">
+                        <!-- <div class="max-width c-dynamic-h">
         
                                 <div class="item-row">
                                         <div class="item-col padding-20">
@@ -212,7 +249,7 @@
                                         
                                 </div>
                         </div>
-                </div>
+                </div> -->
                                 
                 </section>
         
@@ -265,6 +302,16 @@
         
                 </footer>
 
+                <div class="full-screen" ng-class="{'full-active': fullActive}" ng-style="{'background-color': servicio.backgroundColor}">
+                        <div class="card">
+                                <i class="exit fas fa-lg fa-times cursor-pointer" ng-click="min()"></i>
+                                <div class="img" ng-style="{'background-image': 'url(assets/img/'+servicio.imgs[0]+')'}"></div>
+                                <div class="info t-center">
+                                        <h2>{{servicio.title}}</h2>
+                                        <p>{{servicio.desc}}</p>
+                                </div>
+                        </div>
+                </div>
 
 </body>
 </body>
