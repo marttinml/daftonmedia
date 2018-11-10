@@ -265,8 +265,8 @@ body.night{
     margin: auto;
     background-position: center;
     position: absolute;
-    left: 50%;
-    top: 45%;
+    left: 50%!important;
+    top: 45%!important;
     margin-left: -125px;
 }
 .b-black{

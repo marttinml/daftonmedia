@@ -168,6 +168,9 @@
                 $scope.fullActive = false;
             };
 
+            var scene = document.getElementById('home');
+            var parallaxInstance = new Parallax(scene);
+
 
       }).directive('disableAnimation', function($animate){
         return {

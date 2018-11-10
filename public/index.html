@@ -41,7 +41,9 @@
         <script src="assets/libs/CSSPlugin.min.js"></script>
         <script src="assets/libs/parallax_content.js"></script>
         <script src="assets/libs/jssor.slider.min.js"></script>
+        <script src="assets/libs/parallax.js"></script>
         <script src="assets/libs/controller.js"></script>
+        
 </head>
 <body ng-controller="Ctrl as ctrl" ng-class="[color,time]">
 
@@ -74,12 +76,12 @@
         
                 </header>
                 
+                <div class="spin">
+                        <i class="logo-dynamic logo-home"></i>
+                        <div id="typing" class=" c-dynamic typing"></div>
+                </div>
                 <section class="home bg-dynamic" id="home">
-                        <i class="logo-home-blanco"></i></i>
-                        <div class="spin">
-                                <i class="logo-dynamic logo-home"></i>
-                                <div id="typing" class=" c-dynamic typing"></div>
-                        </div>
+                        <i class="logo-home-blanco" data-depth="0.2"></i></i>
                 </section>
         
                 <section class="nosotros c-inherit padding-bottom-100" id="nosotros">
