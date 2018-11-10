@@ -199,11 +199,11 @@ body.night{
 
 .img-slide-item{
     z-index: 1;
-    height: 400px;
-    margin-top: -50px;
+    height: 450px;
+    margin-top: -25px;
     position: absolute;
     left: 50%;
-    margin-left: -310px;
+    margin-left: -330px;
 }
 
 
