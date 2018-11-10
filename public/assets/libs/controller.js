@@ -60,13 +60,13 @@
             $scope.menuShow = false;
           };
 
-        //   $('h1').parallaxContent({
-        //     shift: -15,
-        //     duration: 1
-        //   });
-        //   $('#contentInfo').parallaxContent({
-        //     shift: -15,duration: 2
-        //   });
+          $('h1').parallaxContent({
+            shift: -15,
+            duration: 1
+          });
+          $('#contentInfo').parallaxContent({
+            shift: -15,duration: 2
+          });
 
             var i = 0;
             var txt = 'Cambiamos al mundo un cliente a la vez, a través de nuestro diseño, marketing y estrategias.';
@@ -136,22 +136,22 @@
             $scope.services = [
                 {
                     categorias: ['todo','rostro'],
-                    title: 'Manual de Marca',
-                    desc: 'Manual de MarcaManual de MarcaManual de MarcaManual de MarcaManual de MarcaManual de MarcaManual de MarcaManual de MarcaManual de MarcaManual de MarcaManual de MarcaManual de MarcaManual de Marca',
+                    title: 'Branding',
+                    desc: 'Diseñamos una marca que perdure y se posicione en la mente de las personas',
                     imgs: ['Servicios-1b.png'],
                     backgroundColor: '#339999'
                 },
                 {
                     categorias: ['todo','rostro'],
-                    title: 'Sitio Web',
-                    desc: 'Sitio WebSitio WebSitio WebSitio WebSitio WebSitio WebSitio WebSitio WebSitio WebSitio WebSitio WebSitio WebSitio WebSitio WebSitio WebSitio Web',
+                    title: 'Redes Sociales',
+                    desc: 'Nos aseguramos de que tu marca tenga presencia en las redes, generando un diálogo con tu audiencia y entregando resultados que ven más de los likes.',
                     imgs: ['Servicios-2b.png'],
                     backgroundColor: '#663399'
                 },
                 {
                     categorias: ['todo','cuerpo'],
-                    title: 'Redes Sociales',
-                    desc: 'Redes SocialesRedes SocialesRedes SocialesRedes SocialesRedes SocialesRedes SocialesRedes SocialesRedes SocialesRedes SocialesRedes SocialesRedes SocialesRedes Sociales',
+                    title: 'Desarrollo Web',
+                    desc: 'Colocamos tu marca en el mundo digital y la acercamos a los 4 billones de usuarios que actualmente compran, investigan y se entretienen a travéz de internet',
                     imgs: ['Servicios-3b.png'],
                     backgroundColor: '#993399'
                 }
