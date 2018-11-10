@@ -193,7 +193,7 @@ body.night{
 .mapa{
     background-image: url(../img/mapa_dia.svg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto 100%;
     background-position: center;
 }
 
