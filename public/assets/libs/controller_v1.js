@@ -143,15 +143,15 @@
                 },
                 {
                     categorias: ['todo','rostro'],
-                    title: 'Redes Sociales',
-                    desc: 'Colocamos tu marca en el mundo digital y la acercamos a los 4 billones de usuarios que actualmente compran, investigan y se entretienen a travéz de internet.',
+                    title: 'Desarrollo Web',
+                    desc: 'Colocamos tu marca en el mundo digital y la acercamos a los 4 billones de usuarios que actualmente compran, investigan y se entretienen a través de internet.',
                     imgs: ['Servicios-2b.png'],
                     backgroundColor: '#663399'
                 },
                 {
                     categorias: ['todo','cuerpo'],
-                    title: 'Desarrollo Web',
-                    desc: 'Nos aseguramos de que tu marca tenga presencia en las redes, generando un diálogo con tu audiencia y entregando resultados que ven más de los likes.',
+                    title: 'Redes Sociales',
+                    desc: 'Nos aseguramos de que tu marca tenga presencia en las redes, generando un diálogo con tu audiencia y entregando resultados que van más allá de los likes.',
                     imgs: ['Servicios-3b.png'],
                     backgroundColor: '#993399'
                 }

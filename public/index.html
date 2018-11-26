@@ -52,7 +52,16 @@
         <script src="assets/libs/parallax_content.js"></script>
         <script src="assets/libs/jssor.slider.min.js"></script>
         <script src="assets/libs/parallax.js"></script>
-        <script src="assets/libs/controller.js"></script>
+        <script src="assets/libs/controller_v1.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129688990-1"></script>
+        <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'UA-129688990-1');
+        </script>
         
 </head>
 <body ng-controller="Ctrl as ctrl" ng-class="[color,time]">
@@ -72,8 +81,8 @@
                                 </ul>
                         </nav>
                         <div class="menu-mobile bg-dynamic" ng-class="{show: menuShow}">
-                                <i class="fas fa-bars c-dynamic bar fa-lg" ng-click="showMenu()"></i>
-                                <i class="fas fa-times c-dynamic ex fa-lg" ng-click="hideMenu()"></i>
+                                <i class="fas fa-bars c-dynamic bar fa-lg fa-2x" ng-click="showMenu()"></i>
+                                <i class="fas fa-times c-dynamic ex fa-lg fa-2x" ng-click="hideMenu()"></i>
                                 <ul class="bg-dynamic">
                                         <a href="#nosotros"  ng-click="hideMenu()"> <li><b>Nosotros</b></li></a>
                                         <a href="#servicios"  ng-click="hideMenu()"> <li><b>Servicios</b></li></a>
@@ -98,7 +107,9 @@
                         <div class="max-width">
                                 <h1>Nosotros</h1>
                                 <p class="t-center">
-                                        SOMOS UNA AGENCIA DE MARKETING DIGITAL, NACIDA EN MÉXICO CON UN IMPACTO INTERNACIONAL.NUESTRA MISIÓN ES CREAR IDEAS Y SOLUCIONES PARA EL CRECIMIENTO DE NUESTROS CLIENTES, ENTENDEMOS QUE NO ESTAMOS EN EL NEGOCIO DE LA PUBLICIDAD, ESTAMOS EN EL NEGOCIO DE HACER CRECER A NUESTROS CLIENTES. ES POR ESO QUE NOS PREOCUPAMOS POR CREAR ESTRATEGIAS QUE TENGAN UN IMPACTO REAL Y POSITIVO EN TU EMPRESA
+                                        Somos una agencia de Marketing Digital nacida en México, con un impacto internacional. <br>
+                                        Nuestra misión es crear Ideas y Soluciones para el Crecimiento de nuestros clientes. <br>
+                                        Entendemos que no estamos en el negocio de la publicidad, estamos en el negocio de hacer crecer a nuestros clientes, es por eso que nos preocupamos por crear estrategias que tengan un impacto real y positivo en tu empresa.
                                 </p>
                                 <br>
                                 <br>
